@@ -1,0 +1,7 @@
+[book]
+title = "Szpontniki's Flashing Lights Documentation"
+authors = ["Khenzii <khenzii@khenzii.dev>", "Azteczek"]
+language = "en"
+
+[output.html]
+git-repository-url = "https://github.com/Szpontniki/docs"
