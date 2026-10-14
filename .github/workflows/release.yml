@@ -24,12 +24,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          nix develop -c docker build \
-            -t ghcr.io/szpontniki/docs:${{ github.event.release.tag_name }} . \
-            -t ghcr.io/szpontniki/docs:latest .
+          nix develop -c "docker build -t ghcr.io/szpontniki/docs:${{ github.event.release.tag_name }} ."
+          nix develop -c "docker build -t ghcr.io/szpontniki/docs:latest ."
 
       - name: Push Docker image
         run: |
-          nix develop -c docker push \
-            ghcr.io/szpontniki/docs:${{ github.event.release.tag_name }} \
-            ghcr.io/szpontniki/docs:latest
+          nix develop -c "docker push ghcr.io/szpontniki/docs:${{ github.event.release.tag_name }}"
+          nix develop -c "docker push ghcr.io/szpontniki/docs:latest"
