@@ -5,7 +5,7 @@ on:
 
 jobs:
   containerize:
-    name: ⚙️ Build Docker containers
+    name: ⚙️ Build Docker images
     runs-on: ubuntu-latest
 
     steps:
