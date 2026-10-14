@@ -1,0 +1,10 @@
+.git
+.direnv
+book
+.envrc
+.gitattributes
+.gitignore
+flake.lock
+flake.nix
+LICENSE
+README.md
