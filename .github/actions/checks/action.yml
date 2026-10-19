@@ -1,0 +1,13 @@
+name: Checks
+description: Performs tests on the build
+
+runs:
+  using: composite
+  steps:
+    - name: Install Nix
+      uses: DeterminateSystems/nix-installer-action@v3
+
+    - name: Build
+      shell: bash
+      working-directory: ${{ github.action_path }}/../../..
+      run: nix develop -c mdbook build
